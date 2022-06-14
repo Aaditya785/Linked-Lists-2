@@ -1,0 +1,24 @@
+public class Solution 
+{
+
+static int count = -1;
+	public static int findNodeRec(LinkedListNode<Integer> head, int n) 
+    {
+    	//Your code goes here
+        count++;
+        if(head == null)
+        {
+            return -1;
+        }
+        if(head.data == n)
+        {
+            return count;
+        }
+        return findNodeRec(head.next,n);
+        // if(small == -1)
+        // {
+        //     return -1;
+        // }
+        // return small+1;
+	}
+}
